@@ -1,89 +1,110 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-</head>
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Between the Lines</title>
 
 
-<body>
-<!-- ========================================= -->
-<!-- cut here to embed in the squareSpace site -->
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
-
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-<div style="text-align:center;" class="jumbotron text-center">
-  <h1 class="display-3">Testing Pen Data</h1>
-  <p class="lead">
-    Try sending data to the pen spreadsheet using URL query parameters.
-  </p>
-</div>
-
-<script>
-
-let testObject = [{}];
-let date = new Date();
-
-function getUrlVars()
-{
-        var vars = [], hash;
-        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-        for(var i = 0; i < hashes.length; i++)
-        {
-                hash = hashes[i].split('=');                        
-                vars[hash[0]] = hash[1];
-        }
-        return vars;
-
-}
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="public/assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="public/assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="public/assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="public/assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
 
 
-var url_vars = getUrlVars();
-for(var i in url_vars)
-{
-  let q = i.replace(/!/g,'=');    
-  let question = q.replace(/#/g,' ');
-  let space = url_vars[i].replace(/%20/g, ' ');
-      let answer = space.replace(/%40/g, '@');
-      testObject.push({"name":question, "value":answer});
-} 
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="public/assets/css/theme.css" rel="stylesheet" />
+    <link href="public/assets/css/custom.css" rel="stylesheet" />
+    <link href="public/assets/css/fixed.css" rel="stylesheet" />
 
-testObject.push({"name": "QR Scanned", "value": "TRUE"}, {"name":"Scan Date", "value": date});
-
-console.log(testObject);
-
-let postUrl = 'https://script.google.com/macros/s/AKfycbwcCzX-c6rrV0Rb_hwIOuZ3F2BYDoerbZS-gB5XgSkuMvYQ9rIACegEN6CtkRPC7KIM/exec';
-
-// output the content of the JS Array that has been stringified (so we can see it in the console) 
-console.log(testObject);
-  $.ajax({
-    url: postUrl, // google sheet url
-    method: "GET",
-    dataType: "json",
-    data: testObject, // JS array
-    success: function(data){
-      console.log(data.result);
-      if (data.result = "success") {
-        // show custom msg or do other stuff for the user to see, eg show message on web page
-        console.log("successfully posted to google sheet");
-      };
-    },
-    error: function(data){
-      console.log("fail");
-    }
-});
+  </head>
 
 
-//urlParams.append('status', 'true')) //returns ?q=losAngeles&country=US&status=true
+  <body>
 
-</script>
-<!-- cut here to embed in the squareSpace site -->
-<!-- ========================================= -->
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+ 
+      <section class="py-0" id="home">
 
-</body>
+      <div class="video-background"> 
+        <div class ="video-wrap">
+          <div id="video">
+            <video id="bgvid" autoplay loop muted>
+              <source src="public/assets/video/promo-clips.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
 
+        
+<!--
+        <div class="bg-holder d-lg-block" style="background-image:url(assets/img/illustrations/2621-WIRED-Leak.jpg);background-position:right top;background-size:cover;">
+        </div>
+-->
+
+        <!--/.bg-holder-->
+
+        <!-- <div class="bg-holder  d-lg-none" style="background-image:url(assets/img/illustrations/1-1.png);background-position:left top;background-size:cover;">
+        </div> -->
+        <!--/.bg-holder-->
+
+       <div class="container">
+
+          <div class="row align-items-center min-vh-100">
+            <div class="hero-block col-md-10 col-lg-10 py-5 text-md-start text-left">
+              <h1>Between the Lines</h1>
+              <p class="lead text-muted">Between the Lines is a creative intervention responding to the lived experiences of international students who have been impacted by the influence of the UK border control system on Higher Education Institutions.</p>
+              <p class="lead text-muted">Coming Soon: 08/12/2021</p>
+        
+            </div>
+          </div>
+       </div>
+      </section>
+
+ 
+      
+      <!-- ============================================-->
+
+<!--Section: Contact v.2-->
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/anchorjs/anchor.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="public/assets/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+  </body>
 
 </html>
