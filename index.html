@@ -25,6 +25,7 @@
 <script>
 
 let testObject = [{}];
+let date = new Date();
 
 function getUrlVars()
 {
@@ -50,6 +51,7 @@ for(var i in url_vars)
       testObject.push({"name":question, "value":answer});
 } 
 
+testObject.push({"name":"Scan Date", "value": date});
 console.log(testObject);
 
 let postUrl = 'https://script.google.com/macros/s/AKfycbwcCzX-c6rrV0Rb_hwIOuZ3F2BYDoerbZS-gB5XgSkuMvYQ9rIACegEN6CtkRPC7KIM/exec';
