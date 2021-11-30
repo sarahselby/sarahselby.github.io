@@ -1,0 +1,44 @@
+body {
+	color: #fff !important;
+}
+
+.text-muted {
+	color: #fff;
+}
+
+.text-title {
+	color: #fff !important;
+}
+
+h1 {
+	color: #fff !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.md-form {
+	color: #000;
+}
+
+.blueP {
+	color: black !important;
+}
+
+
+.hero-block {
+	background: rgba(0,0,0,0.3);
+}
+
+.btn {
+	color: #fff;
+}
+
