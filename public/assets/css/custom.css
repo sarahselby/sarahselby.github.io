@@ -6,12 +6,23 @@ body {
 	color: #fff;
 }
 
+.intro {
+	padding-top: 3rem;
+	color: orange;
+}
+
 .text-title {
 	color: #fff !important;
 }
 
 h1 {
 	color: #fff !important;
+}
+
+.bottom-align-text {
+ 	position: absolute;
+    bottom: 2rem;
+    left: 12rem;
 }
 
 .overlay {
