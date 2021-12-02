@@ -26,6 +26,13 @@ h1 {
 p {
 	color: #4C6983 !important;
 }
+
+#nav1
+{  
+    background-color:white; /*whichever you want*/
+    opacity: 0.5; 
+    filter:(opacity=50);       
+}
 /*
 .bottom-align-text {
  	position: absolute;
@@ -59,5 +66,28 @@ p {
 
 .btn {
 	color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav.navbar {
+    
+  }
+}
+
+/*  change navbar li colors, also active one but not disabled one */
+.navbar a.nav-link {
+  color: black !important;
+}
+
+#navButton {
+	background-color: #2b3d4F !important;
+}
+/* change navbar-toggler inside lines color (stroke) */
+.navbar-light span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/* change hamburger button border color */
+button.navbar-toggler.navbar-toggler-right {
+  border-color: yellow;
 }
 
