@@ -34,6 +34,63 @@
 
   </head>
 
+  <script>
+
+
+let testObject = [{}];
+let date = new Date();
+
+function getUrlVars()
+{
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+                hash = hashes[i].split('=');                        
+                vars[hash[0]] = hash[1];
+        }
+        return vars;
+
+}
+
+
+var url_vars = getUrlVars();
+for(var i in url_vars)
+{
+  let q = i.replace(/!/g,'=');    
+  let question = q.replace(/#/g,' ');
+  let space = url_vars[i].replace(/%20/g, ' ');
+      let answer = space.replace(/%40/g, '@');
+      testObject.push({"name":question, "value":answer});
+} 
+
+//testObject.push({"name": "QR Scanned", "value": "TRUE"}, {"name":"Scan Date", "value": date});
+
+console.log(testObject);
+
+let postUrl = 'https://script.google.com/macros/s/AKfycbwcCzX-c6rrV0Rb_hwIOuZ3F2BYDoerbZS-gB5XgSkuMvYQ9rIACegEN6CtkRPC7KIM/exec';
+
+// output the content of the JS Array that has been stringified (so we can see it in the console) 
+console.log(testObject);
+  $.ajax({
+    url: postUrl, // google sheet url
+    method: "GET",
+    dataType: "json",
+    data: testObject, // JS array
+    success: function(data){
+      console.log(data.result);
+      if (data.result = "success") {
+        // show custom msg or do other stuff for the user to see, eg show message on web page
+        console.log("successfully posted to google sheet");
+      };
+    },
+    error: function(data){
+      console.log("fail");
+    }
+});
+
+</script>
+
 
   <body>
 
