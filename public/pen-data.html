@@ -40,6 +40,9 @@ for(var i in url_vars)
   let space = url_vars[i].replace(/%20/g, ' ');
       let answer = space.replace(/%40/g, '@');
       testObject.push({"name":question, "value":answer});
+      if (question=="key") {
+        testObject.push({"name": "Unique Key", "value": answer});
+      }
 } 
 
 testObject.push({"name": "QR Scanned", "value": "TRUE"}, {"name":"Scan Date", "value": date});
