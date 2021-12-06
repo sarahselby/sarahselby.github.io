@@ -68,16 +68,22 @@ p {
 	color: #fff;
 }
 
+/*  change navbar li colors, also active one but not disabled one */
+.navbar a.nav-link {
+  color: white !important;
+}
+
 @media (max-width: 768px) {
-  nav.navbar {
-    
+  .navbar a.nav-link {
+    color: black !important;
+  }
+
+  .navbar-toggler {
+    background-color: rgba(0,0,0,0.3) !important;
   }
 }
 
-/*  change navbar li colors, also active one but not disabled one */
-.navbar a.nav-link {
-  color: black !important;
-}
+
 
 #navButton {
 	background-color: #2b3d4F !important;
