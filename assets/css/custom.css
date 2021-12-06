@@ -73,6 +73,10 @@ p {
   color: white !important;
 }
 
+.navbar-nav .active {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .navbar a.nav-link {
     color: black !important;
