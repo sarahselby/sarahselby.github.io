@@ -1,0 +1,93 @@
+/* body {
+	color: #fff !important;
+}
+
+.text-muted {
+	color: #fff;
+} */
+
+.intro {
+	padding-top: 3rem;
+}
+
+.text-title {
+	color: #fff !important;
+}
+
+.illu {
+	background-color: #fff !important;
+}
+
+h1 {
+	color: #fff !important;
+}
+
+
+p {
+	color: #4C6983 !important;
+}
+
+#nav1
+{  
+    background-color:white; /*whichever you want*/
+    opacity: 0.5; 
+    filter:(opacity=50);       
+}
+/*
+.bottom-align-text {
+ 	position: absolute;
+    bottom: 2rem;
+    left: 12rem;
+}*/
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.md-form {
+	color: #000;
+}
+
+.blueP {
+	color: black !important;
+}
+
+
+.hero-block {
+	background: rgba(0,0,0,0.3);
+}
+
+.btn {
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav.navbar {
+    
+  }
+}
+
+/*  change navbar li colors, also active one but not disabled one */
+.navbar a.nav-link {
+  color: black !important;
+}
+
+#navButton {
+	background-color: #2b3d4F !important;
+}
+/* change navbar-toggler inside lines color (stroke) */
+.navbar-light span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/* change hamburger button border color */
+button.navbar-toggler.navbar-toggler-right {
+  border-color: yellow;
+}
+
