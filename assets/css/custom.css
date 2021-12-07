@@ -19,6 +19,10 @@
 	background-color: #fff !important;
 }
 
+section {
+  padding-bottom: 0rem;
+}
+
 h1 {
 	color: #fff !important;
 }
@@ -119,6 +123,7 @@ button.navbar-toggler.navbar-toggler-right {
     overflow: hidden; 
     max-width: 100%; 
     height: auto; 
+    margin-bottom: 20px;
 }
 
 .yt-video-container iframe{
