@@ -73,6 +73,10 @@ p {
   color: white !important;
 }
 
+.navbar {
+  /*background-color: rgba(0,0,0,0.4) !important;*/
+}
+
 .navbar-nav .active {
   text-decoration: underline;
 }
@@ -85,6 +89,11 @@ p {
   .navbar-toggler {
     background-color: rgba(0,0,0,0.3);
   }
+
+  .navbar {
+    /*background-color: rgba(255,255,255,0.9) !important;*/
+  }
+
 }
 
 
