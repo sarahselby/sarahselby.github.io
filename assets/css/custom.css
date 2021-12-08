@@ -19,6 +19,12 @@
 	background-color: #fff !important;
 }
 
+.about-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 section {
   padding-bottom: 1rem;
 }
