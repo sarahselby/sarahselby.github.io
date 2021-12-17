@@ -37,7 +37,7 @@ for(var i in url_vars)
 {
   let q = i.replace(/!/g,'=');    
   let question = q.replace(/#/g,' ');
-  let space = url_vars[i].replace(/%20/g, ' ');
+  let space = question.replace(/%20/g, ' ');
       let answer = space.replace(/%40/g, '@');
       testObject.push({"name":question, "value":answer});
       if (question=="key") {
